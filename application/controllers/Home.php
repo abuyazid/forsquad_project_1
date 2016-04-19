@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Home extends CI_Controller {
+	
+	function __construct()
+		{
+			parent::__construct();
+			$this->load->model('home_model');
+			$this->load->helper('form');
+		    $this->load->helper('url');
+
+		}
+	
+	public function index()
+	{
+		$data['v_title']= "home";
+		$data['content_terbanyak']= $this->home_model->f_content();
+		//die(var_dump($data['content_terbanyak']));
+		$v_cont['content'] = $this->load->view('home_view', $data, true);
+		$this->load->view('index_view',$v_cont);
+	}
+}
