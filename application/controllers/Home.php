@@ -16,7 +16,9 @@ class Home extends CI_Controller {
 	{
 		$data['v_title']= "home";
 		$data['content_terbanyak']= $this->home_model->f_content();
-		//die(var_dump($data['content_terbanyak']));
+		$data['content_anime']= $this->home_model->f_content_anime();
+		$data['content_game']= $this->home_model->f_content_game();
+		//die(var_dump($data['content_anime']));
 		$v_cont['content'] = $this->load->view('home_view', $data, true);
 		$this->load->view('index_view',$v_cont);
 	}
