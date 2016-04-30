@@ -26,5 +26,6 @@ class Home_model extends CI_Model{
 		$sql = "SELECT * FROM artikel where id_kategori=2 order by date_created desc limit 3";
 		return $this->db->query($sql)->result_array();
 	}
+	
 }
 ?>

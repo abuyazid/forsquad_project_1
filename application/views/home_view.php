@@ -220,10 +220,11 @@
                         </div>
                     </div>
                     <div class="row-fluid">
+						
                         <div class="span2">
                             <article>
                                 <div class="post-thumb">
-                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/index-img-1.png" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $content_game[0]['FILE']; ?>" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -240,16 +241,18 @@
                                     </ul>
                                 </div>
                                 <div class="cat-post-desc">
-                                    <h3><a href="#">The Hangover 3: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
+                                    <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$content_game[0]['ID_ARTIKEL']?>"><?= $content_game[0]['JUDUL']; ?></a></h3>
                                     <p class="date">12 march 2013  // 45 Comments</p>
-                                    <p>Ever since the first ‘The Hangover’ movie (which also had an equally amazing movie trailer), people across the country have been enamored by the magic of black-out drinking...</p>
+                                    <p><?= $content_game[0]['ISI']; ?></p>
                                 </div>
                             </article>
                         </div>
                         <div class="span2">
-                            <article class="twoboxes">
+                            <?php $no=1; foreach($content_game as $row){ if($no==1){$class="twoboxes";}elseif($no==2){$class="twoboxes";}else{$class="twoboxes last";}?>
+							
+							<article class="twoboxes">
                                 <div class="post-thumb">
-                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/footer-img-1.jpg" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -258,7 +261,7 @@
                                     </div>
                                 </div>
                                 <div class="right-desc">
-                                    <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
+                                    <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?=$row['JUDUL']?></a></h3>
                                     <ul class="rating calc">
                                         <li class="active nr_1"><a href="javascript:void(0)"></a></li>
                                         <li class="active nr_2"><a href="javascript:void(0)"></a></li>
@@ -271,54 +274,7 @@
                                 </div>
                                 <div class="clear"></div>
                             </article>
-                            <article class="twoboxes">
-                                <div class="post-thumb">
-                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/footer-img-3.jpg" alt=""></a>
-                                    <div class="overlay">
-                                        <div class="op"></div>
-                                        <div class="cat">
-                                            <div class="icon"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right-desc">
-                                    <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                                    <ul class="rating calc">
-                                        <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                        <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                        <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                        <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                        <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                    <p class="date">12 march 2013</p>    
-                                </div>
-                                <div class="clear"></div>
-                            </article>
-                            <article class="twoboxes last">
-                                <div class="post-thumb">
-                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/footer-img-5.jpg" alt=""></a>
-                                    <div class="overlay">
-                                        <div class="op"></div>
-                                        <div class="cat">
-                                            <div class="icon"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right-desc">
-                                    <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                                    <ul class="rating calc">
-                                        <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                        <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                        <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                        <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                        <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                    <p class="date">12 march 2013</p>    
-                                </div>
-                                <div class="clear"></div>
-                            </article>    
+							<?php $no++;}?>					
                         </div>
                     </div>
                     <div class="clear"></div>
