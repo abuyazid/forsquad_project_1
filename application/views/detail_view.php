@@ -1,85 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport"  content="initial-scale=1, width=device-width">
-
-<title>Blog single</title>
-
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-
-<!--[if  IE]>
-<link rel="stylesheet" type="text/css" href="css/ie.css" />
-<![endif]-->
-
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<![endif]-->
-
-</head>
-
-<body>
-    
-    <!-- start div #wrapper -->
-    <div id="wrapper">
-        
-        <!-- start header -->
-        <header>
-            <div class="border-left"></div>
-            <div class="logo">
-                <a href="index-2.html"><img src="img/logo.png" alt=""></a>
-                <span class="border-bottom"></span>
-            </div>
-            <div class="search">
-                <form action="#" method="post">
-                    <input class="field" type="text" name="" value="Search rumors..." onFocus="if (this.value==this.defaultValue) this.value = ''" 
-                    onblur="if (this.value=='') this.value = this.defaultValue" >
-                    <input class="submit" type="submit" name="" value="" >
-                </form>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li class="active"><span class="border-bottom"></span><a href="category.html">World</a></li>
-                    <li><span class="border-bottom"></span><a href="category.html">Spotlight</a></li>
-                    <li><span class="border-bottom"></span><a href="category.html">Sports</a>
-                        <ul class="dropdown">
-                            <li><a href="category.html">subcategory</a></li>
-                            <li><a href="category.html">another one</a></li>
-                            <li class="last"><span class="border-bottom"></span><a href="category.html">third category</a></li>
-                        </ul>
-                    </li>
-                    <li><span class="border-bottom"></span><a href="category.html">business</a></li>
-                    <li><span class="border-bottom"></span><a href="category.html">health</a></li>
-                    <li><span class="border-bottom"></span><a href="category.html">Science</a></li>
-                    <li><span class="border-bottom"></span><a href="features.html">Features</a>
-                        <ul class="dropdown">
-                            <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="blog-single-with-rating.html">News with rating</a></li>
-                            <li class="last"><span class="border-bottom"></span><a href="full-width.html">full width</a></li>
-                        </ul>
-                    </li>
-                </ul>                                              
-            </nav>   
-            <select class="mobile-menu" onchange='document.location.href=this.options[this.selectedIndex].value;'> 
-                <option value="">Go To...</option> 
-                <option value="index-2.html">Home</option>
-                <option value="category.html">Category</option>
-                <option value="blog-single.html">News single</option>
-                <option value="features.html">Features</option>
-                <option value="full-width.html">-Full width</option>
-                <option value="blog-single-with-rating.html">-News single with rating box</option>
-                <option value="contact.html">-Contact</option>
-            </select>
-            <div class="clear"></div>
-        </header>
-        <!-- end header -->
-        
+       
         <!-- start div #main-title -->
         <div class="main-title">
-            <p>world news</p>
+            <p><?= $detail_artikel['NAMA_KATEGORI']?></p>
         </div>
         <!-- end div #main-title -->
         
@@ -89,10 +11,10 @@
             	<div class="left-container">
                 	<article>
                     	<div class="title-box">
-                            <h1>The Hangover 3: The Trilogy Finale Teaser Trailer Leaked Online</h1>
+                            <h1><?= $detail_artikel['JUDUL']?></h1>
                         </div>
                         <div class="post-thumb">
-                        	<img src="img/post-img-1.jpg" alt="">
+                        	<img src="<?=base_url();?>img_content/<?= $detail_artikel['FILE'];?>" alt="">
                             <ul class="rating calc">
                                 <li class="active nr_1"><a href="javascript:void(0)"></a></li>
                                 <li class="active nr_2"><a href="javascript:void(0)"></a></li>
@@ -103,15 +25,16 @@
                         </div>
                         <div class="post-info">
                             <ul>
-                                <li>category<br><span>Entertainment</span></li>
-                                <li>author<br><span>John Joe Doe</span></li>
+                                <li>category<br><span><?= $detail_artikel['NAMA_KATEGORI']?></span></li>
+                                <li>author<br><span><?= $detail_artikel['CREATED_BY']?></span></li>
                                 <li>47<br><span>Comments</span></li>
-                                <li>12<br><span>March</span></li>
+                                <li><P><?= date_format(date_create($detail_artikel['DATE_CREATED']),"d"); ?><br><span><?= date_format(date_create($detail_artikel['DATE_CREATED']),"M"); ?></span></P></li>
                             </ul>
                             <div class="clear"></div>    
                         </div>
                         <div class="post-content">
-                            <p>Ever since the first ‘The Hangover’ movie (which also had an equally amazing movie trailer), people across the country have been enamored by the magic of black-out drinking and the hilarity that typically ensues after a night of drinking.</p>
+                            <!--
+							<p>Ever since the first ‘The Hangover’ movie (which also had an equally amazing movie trailer), people across the country have been enamored by the magic of black-out drinking and the hilarity that typically ensues after a night of drinking.</p>
                             <p>The second “The Hangover” movie was a bit lackluster compared to the first (also scintillating audiences with a hilarious movie trailer), but the highly-anticipated next installment of The Hangover trilogy (The Hangover 3) seems to be gearing up to send the franchise off with a blast.</p>
                             <p>The Hangover 3 will be assembling the same cast as the first movie, and has already released a new teaser trailer which already seems to indicate the gang will be getting into some crazy antics. You can watch the new The Hangover 3 teaser trailer video below. You can also find leaked images and photos from the movie below.</p>
                             <h3>You can also find leaked images and photos from the movie below.</h3>
@@ -119,111 +42,9 @@
                             <p class="quote"><span class="icon"></span>The second “The Hangover” movie was a bit lackluster compared to the first (also scintillating audiences with a hilarious movie trailer), but the highly-anticipated next installment of The Hangover trilogy (The Hangover 3) seems to be gearing up to send the franchise off with a blast.</p>
                             <p>The second “The Hangover” movie was a bit lackluster compared to the first (also scintillating audiences with a hilarious movie trailer), but the highly-anticipated next installment of The Hangover trilogy (The Hangover 3) seems to be gearing up to send the franchise off with a blast.</p> 
                             <p>The Hangover 3 will be assembling the same cast as the first movie, and has already released a new teaser trailer which already seems to indicate the gang will be getting into some crazy antics. You can watch the new The Hangover 3 teaser trailer video below. You can also find leaked images and photos from the movie below.</p>
-                            <div class="marked-title first">
-                                <h3>you may also want to read</h3>
-                            </div>
-                            <div class="row-fluid">
-                                <div class="span4">
-                                    <article class="small single">
-                                        <div class="post-thumb">
-                                            <a href="blog-single.html"><img src="img/cat-img-15.jpg" alt=""></a>
-                                            <div class="overlay">
-                                                <div class="op"></div>
-                                                <div class="cat">
-                                                    <div class="icon"></div>
-                                                    world
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cat-post-desc">
-                                            <p class="date">12 march 2013</p>
-                                            <h3><a href="blog-single.html">'Iron Man 3' Secrets Revealed: Robert Downey Jr. Explains It All</a></h3>
-                                            <ul class="rating calc">
-                                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>    
-                                </div>
-                                <div class="span4">
-                                    <article class="small single">
-                                        <div class="post-thumb">
-                                            <a href="blog-single.html"><img src="img/cat-img-16.jpg" alt=""></a>
-                                            <div class="overlay">
-                                                <div class="op"></div>
-                                                <div class="cat">
-                                                    <div class="icon"></div>
-                                                    world
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cat-post-desc">
-                                            <p class="date">12 march 2013</p>
-                                            <h3><a href="blog-single.html">'Iron Man 3' Secrets Revealed: Robert Downey Jr. Explains It All</a></h3>
-                                            <ul class="rating calc">
-                                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>    
-                                </div>
-                                <div class="span4">
-                                    <article class="small single">
-                                        <div class="post-thumb">
-                                            <a href="blog-single.html"><img src="img/cat-img-15.jpg" alt=""></a>
-                                            <div class="overlay">
-                                                <div class="op"></div>
-                                                <div class="cat">
-                                                    <div class="icon"></div>
-                                                    world
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cat-post-desc">
-                                            <p class="date">12 march 2013</p>
-                                            <h3><a href="blog-single.html">'Iron Man 3' Secrets Revealed: Robert Downey Jr. Explains It All</a></h3>
-                                            <ul class="rating calc">
-                                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>    
-                                </div>
-                                <div class="span4">
-                                    <article class="small single">
-                                        <div class="post-thumb">
-                                            <a href="blog-single.html"><img src="img/cat-img-16.jpg" alt=""></a>
-                                            <div class="overlay">
-                                                <div class="op"></div>
-                                                <div class="cat">
-                                                    <div class="icon"></div>
-                                                    world
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cat-post-desc">
-                                            <p class="date">12 march 2013</p>
-                                            <h3><a href="blog-single.html">'Iron Man 3' Secrets Revealed: Robert Downey Jr. Explains It All</a></h3>
-                                            <ul class="rating calc">
-                                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>    
-                                </div>
-                            </div>
+                            -->
+							<?= $detail_artikel['ISI']?>
+		
                             <div class="comments">
                             	<div class="marked-title">
                                     <h3>47 comments</h3>
@@ -515,192 +336,6 @@
     </div>
 	<!-- end div #wrapper -->    
     
-    <!-- start footer -->
-    <footer>
-        <div class="footer-top">
-            <div class="logo">
-                <a href="index-2.html"><img src="img/logo.png" alt=""></a>
-                <span class="border-bottom"></span>
-            </div>
-            <div class="widget first">
-                <div class="desc">
-                    <p>Too many of us look upon Americans as dollar chasers. This is a cruel libel, even if it is reiterated thoughtlessly by the Americans themselves.</p>
-                    <p>This is a cruel libel, even if it is reiterated thoughtlessly by the Americans themselves.</p>
-                </div>
-                <ul class="info">
-                    <li class="address">Salt Lake City, UT 87234</li>
-                    <li class="phone">(871) 321-6567</li>
-                    <li class="mail"><a href="mailto:awesome@website.com">awesome@website.com</a></li>
-                </ul>
-            </div>
-            <div class="widget">
-                <div class="title">
-                    <h3>latest news</h3>
-                </div>
-                <div class="news">
-                    <article class="twoboxes">
-                        <div class="post-thumb">
-                            <a href="blog-single.html"><img src="img/footer-img-1.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div class="op"></div>
-                                <div class="cat">
-                                    <div class="icon"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-desc">
-                            <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                            <ul class="rating calc">
-                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                            <p class="date">12 march 2013</p>    
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                    <article class="twoboxes">
-                        <div class="post-thumb">
-                            <a href="blog-single.html"><img src="img/footer-img-2.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div class="op"></div>
-                                <div class="cat">
-                                    <div class="icon"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-desc">
-                            <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                            <ul class="rating calc">
-                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                            <p class="date">12 march 2013</p>    
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                    <article class="twoboxes last">
-                        <div class="post-thumb">
-                            <a href="blog-single.html"><img src="img/footer-img-3.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div class="op"></div>
-                                <div class="cat">
-                                    <div class="icon"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-desc">
-                            <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                            <ul class="rating calc">
-                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                            <p class="date">12 march 2013</p>    
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                </div>
-            </div>
-            <div class="widget last">
-                <div class="title">
-                    <h3>most popular</h3>
-                </div>
-                <div class="news">
-                    <article class="twoboxes">
-                        <div class="post-thumb">
-                            <a href="blog-single.html"><img src="img/footer-img-4.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div class="op"></div>
-                                <div class="cat">
-                                    <div class="icon"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-desc">
-                            <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                            <ul class="rating calc">
-                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                            <p class="date">12 march 2013</p>    
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                    <article class="twoboxes">
-                        <div class="post-thumb">
-                            <a href="blog-single.html"><img src="img/footer-img-5.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div class="op"></div>
-                                <div class="cat">
-                                    <div class="icon"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-desc">
-                            <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                            <ul class="rating calc">
-                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                            <p class="date">12 march 2013</p>    
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                    <article class="twoboxes last">
-                        <div class="post-thumb">
-                            <a href="blog-single.html"><img src="img/footer-img-6.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div class="op"></div>
-                                <div class="cat">
-                                    <div class="icon"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-desc">
-                            <h3><a href="#">Do Critics Think Jason Statham’s New Action Movie Kicks Ass?</a></h3>
-                            <ul class="rating calc">
-                                <li class="active nr_1"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_2"><a href="javascript:void(0)"></a></li>
-                                <li class="active nr_3"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_4"><a href="javascript:void(0)"></a></li>
-                                <li class="nr_5"><a href="javascript:void(0)"></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                            <p class="date">12 march 2013</p>    
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="footer-bottom">
-            <div class="copyright">
-                <p>Copyright 2013 @ <span>RUMORS</span>. // A mega awesome NEWS MAGAZINE theme.</p>
-            </div>
-            <div class="clear"></div>
-        </div>  
-    </footer>
-    <!-- end footer -->
 
     <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
     <script type="text/javascript" src="js/html5shiv.js" ></script>

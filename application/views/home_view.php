@@ -6,7 +6,7 @@
 				<div class="cn_content bg-<?=$no;?>" style="top:0px;">
 					<img src="<?=base_url();?>img_content/<?= $row['FILE'];?>">
                     <div class="caption">
-                        <h3><a href="blog-single.html"><?= $no."-".$row['JUDUL'];?></a></h3>
+                        <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?= $no."-".$row['JUDUL'];?></a></h3>
                         <p><?= $row['ISI'];?></p>
                         <div class="date">
                             <P><?= date_format(date_create($row['DATE_CREATED']),"d"); ?><br><span><?= date_format(date_create($row['DATE_CREATED']),"M"); ?></span></P>
@@ -18,7 +18,7 @@
 				<!--
 				<div class="cn_content bg-1" style="top:0px;">
                     <div class="caption">
-                        <h3><a href="blog-single.html">The Hangover 1: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
+                        <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>">The Hangover 1: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
                         <p>Ever since the first ‘The Hangover’ movie (which also had an equally amazing movie trailer), people across the country have been enamored by the magic of black-out drinking...</p>
                         <div class="date">
                             <P>12<br><span>March</span></P>
@@ -30,7 +30,7 @@
 				
                 <div class="cn_content bg-2">
                     <div class="caption">
-                        <h3><a href="blog-single.html">The Hangover 2: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
+                        <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>">The Hangover 2: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
                         <p>Ever since the first ‘The Hangover’ movie (which also had an equally amazing movie trailer), people across the country have been enamored by the magic of black-out drinking...</p>
                         <div class="date">
                             <P>12<br><span>March</span></P>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="cn_content bg-3">
                     <div class="caption">
-                        <h3><a href="blog-single.html">The Hangover 3: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
+                        <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>">The Hangover 3: The Trilogy Finale Teaser Trailer Leaked Online</a></h3>
                         <p>Ever since the first ‘The Hangover’ movie (which also had an equally amazing movie trailer), people across the country have been enamored by the magic of black-out drinking...</p>
                         <div class="date">
                             <P>12<br><span>March</span></P>
@@ -93,7 +93,7 @@
 							<?php $no=1; foreach($content_terbanyak as $row){?>
 							<article class="small">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="cat-post-desc">
                                     <p class="date"><?= $row['DATE_CREATED'];?></p>
-                                    <h3><a href="blog-single.html"><?= $row['JUDUL'];?></a></h3>
+                                    <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?= $row['JUDUL'];?></a></h3>
                                     <ul class="rating calc">
                                         <li class="active nr_1"><a href="javascript:void(0)"></a></li>
                                         <li class="active nr_2"><a href="javascript:void(0)"></a></li>
@@ -124,7 +124,7 @@
                             							<?php $no=1; foreach($content_terbanyak as $row){?>
 							<article class="small">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="cat-post-desc">
                                     <p class="date"><?= $row['DATE_CREATED'];?></p>
-                                    <h3><a href="blog-single.html"><?= $row['JUDUL'];?></a></h3>
+                                    <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?= $row['JUDUL'];?></a></h3>
                                     <ul class="rating calc">
                                         <li class="active nr_1"><a href="javascript:void(0)"></a></li>
                                         <li class="active nr_2"><a href="javascript:void(0)"></a></li>
@@ -157,7 +157,7 @@
 							<?php $no=1; foreach($content_anime as $row){ if($no==1){$class="border";}elseif($no==2){$class="twoboxes";}else{$class="twoboxes last";}?>
                             <article class="<?=$class?>">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -189,7 +189,7 @@
 							<?php $no=1; foreach($content_anime as $row){ if($no==1){$class="border";}elseif($no==2){$class="twoboxes";}else{$class="twoboxes last";}?>
                             <article class="border">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -223,7 +223,7 @@
                         <div class="span2">
                             <article>
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>assets/img/index-img-1.png" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/index-img-1.png" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -249,7 +249,7 @@
                         <div class="span2">
                             <article class="twoboxes">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>assets/img/footer-img-1.jpg" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/footer-img-1.jpg" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -273,7 +273,7 @@
                             </article>
                             <article class="twoboxes">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>assets/img/footer-img-3.jpg" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/footer-img-3.jpg" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
@@ -297,7 +297,7 @@
                             </article>
                             <article class="twoboxes last">
                                 <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="<?=base_url();?>assets/img/footer-img-5.jpg" alt=""></a>
+                                    <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>assets/img/footer-img-5.jpg" alt=""></a>
                                     <div class="overlay">
                                         <div class="op"></div>
                                         <div class="cat">
