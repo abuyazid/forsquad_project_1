@@ -154,7 +154,7 @@
                             <div class="marked-title">
                                 <h3>Event</h3>
                             </div>
-							<?php $no=1; foreach($content_anime as $row){ if($no==1){$class="border";}elseif($no==2){$class="twoboxes";}else{$class="twoboxes last";}?>
+							<?php $no=1; foreach($content_event as $row){ if($no==1){$class="border";}elseif($no==2){$class="twoboxes";}else{$class="twoboxes last";}?>
                             <article class="<?=$class?>">
                                 <div class="post-thumb">
                                     <a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><img src="<?=base_url();?>img_content/<?= $row['FILE']; ?>" alt=""></a>
@@ -174,7 +174,7 @@
                                     </ul>
                                 </div>
                                 <div class="cat-post-desc">
-                                    <h3><a href="#"><?= $row['JUDUL']; ?></a></h3>
+                                    <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?= $row['JUDUL']; ?></a></h3>
                                     <p class="date">12 march 2013  // 45 Comments</p>
                                     <p><?= $row['ISI']; ?></p>
                                 </div>
@@ -206,7 +206,7 @@
                                     </ul>
                                 </div>
                                 <div class="cat-post-desc">
-                                    <h3><a href="#"><?= $row['JUDUL']; ?></a></h3>
+                                    <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?= $row['JUDUL']; ?></a></h3>
                                     <p class="date">12 march 2013  // 45 Comments</p>
                                     <p><?= $row['ISI']; ?></p>
                                 </div>
