@@ -1127,7 +1127,7 @@ p b {
 	font-size:12px;
 	display:block;
 	font-family: 'TitilliumText25L600wt';
-	font-style:italic;
+	
 	background: #f0f0f0;
 }
 .main-content .contact-content .contact-form .parent.last {
@@ -1160,7 +1160,7 @@ p b {
 	font-size:12px;
 	background:#f0f0f0;
 	font-family: 'TitilliumText25L600wt';
-	font-style:italic;
+	
 }
 .main-content .contact-content .contact-form .submit {
 	float: right;
