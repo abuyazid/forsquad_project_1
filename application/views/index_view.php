@@ -66,6 +66,11 @@
                             <li class="last"><span class="border-bottom"></span><a href="full-width.html">full width</a></li>
                         </ul>
                     </li>
+					<li><span class="border-bottom"></span><a href="">Admin</a>
+                        <ul class="dropdown">
+                            <li><a href="<?=base_url();?>/index.php/Input_artikel">Input Artikel</a></li>
+                        </ul>
+                    </li>
 					
                 </ul>                                              
             </nav>   

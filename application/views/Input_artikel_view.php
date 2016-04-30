@@ -1,3 +1,5 @@
+<?= form_open_multipart('Input_Artikel/create', array('id'=>'form_input', 'name'=> 'form_input')) ?>
+
 <!-- start div #main -->
 	    <div id="main">
             <div class="main-content contact">
@@ -47,9 +49,9 @@
 
                             <div class="bottom-form">
 								<label class="">Isi Artikel</label>
-                                <textarea></textarea>
+                                <textarea name="p_isi"></textarea>
                             </div>
-                            <button class="btn btn-icon submit" type="submit"><span class="icon"></span>Drop message</button>
+                            <button class="btn btn-icon submit" type="submit"><span class="icon"></span>Submit</button>
                         </form>
                         <div class="clear"></div>
                     </div>
@@ -57,3 +59,5 @@
             </div>	
         </div>
 	    <!-- end div #main -->
+		
+<?= form_close() ?>
