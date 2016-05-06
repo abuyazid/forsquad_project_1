@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: May 06, 2016 at 06:15 PM
+=======
+-- Generation Time: May 06, 2016 at 01:53 PM
+>>>>>>> 06e4df39c548b8bfaf2d2cb549231d570853ecb6
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -17,7 +21,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `okb`
+-- Database: `okb     `
 --
 CREATE DATABASE IF NOT EXISTS `okb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `okb`;
@@ -130,6 +134,7 @@ CREATE TABLE IF NOT EXISTS `role` (
   KEY `ID_ROLE` (`ID_ROLE`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `role`
 --
@@ -139,6 +144,8 @@ INSERT INTO `role` (`ID_ROLE`, `NAME`, `DESCRIPTION`) VALUES
 (2, 'admin', 'Update Artikel'),
 (3, 'user', 'Login, comment, subscribe');
 
+=======
+>>>>>>> 06e4df39c548b8bfaf2d2cb549231d570853ecb6
 -- --------------------------------------------------------
 
 --
@@ -214,8 +221,13 @@ ALTER TABLE `artikel_tag`
 -- Constraints for table `user`
 --
 ALTER TABLE `user`
+<<<<<<< HEAD
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`ID_BERLANGGANAN`) REFERENCES `tabel_berlangganan` (`ID_BERLANGGANAN`),
   ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`ID_ROLE`) REFERENCES `role` (`ID_ROLE`) ON DELETE CASCADE ON UPDATE CASCADE;
+=======
+  ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`ID_ROLE`) REFERENCES `role` (`ID_ROLE`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`ID_BERLANGGANAN`) REFERENCES `tabel_berlangganan` (`ID_BERLANGGANAN`);
+>>>>>>> 06e4df39c548b8bfaf2d2cb549231d570853ecb6
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
