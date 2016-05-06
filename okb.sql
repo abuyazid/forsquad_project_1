@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `okb`
+-- Database: `okb     `
 --
 CREATE DATABASE IF NOT EXISTS `okb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `okb`;
