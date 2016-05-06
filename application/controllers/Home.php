@@ -9,7 +9,6 @@ class Home extends CI_Controller {
 			$this->load->model('home_model');
 			$this->load->helper('form');
 		    $this->load->helper('url');
-
 		}
 	
 	public function index()
@@ -22,4 +21,5 @@ class Home extends CI_Controller {
 		$v_cont['content'] = $this->load->view('home_view', $data, true);
 		$this->load->view('index_view',$v_cont);
 	}
+
 }

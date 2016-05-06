@@ -30,16 +30,20 @@
         <header>
             <div class="border-left"></div>
             <div class="logo">
-                <a href="index-2.html"><img src="<?=base_url();?>assets/img/logo.png" alt=""></a>
+                <a href="home"><img src="<?=base_url();?>assets/img/logo.png" alt=""></a>
                 <span class="border-bottom"></span>
             </div>
+			
             <div class="search">
+				
                 <form action="#" method="post">
                     <input class="field" type="text" name="" value="Search rumors..." onFocus="if (this.value==this.defaultValue) this.value = ''" 
                     onblur="if (this.value=='') this.value = this.defaultValue" >
                     <input class="submit" type="submit" name="" value="" >
                 </form>
             </div>
+			
+			
             <nav class="menu">
                 <ul>
 					<li><span class="border-bottom"></span><a href="category.html">Anime</a>
@@ -65,6 +69,10 @@
                             <li class="last"><span class="border-bottom"></span><a href="full-width.html">full width</a></li>
                         </ul>
                     </li>
+					<li><span class="border-bottom"></span><a href="login">Login</a>
+							
+                    </li>
+					
 					
                 </ul>                                              
             </nav>   
