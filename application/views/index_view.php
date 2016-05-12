@@ -87,7 +87,9 @@ $email = null;
                             <li><a href="<?=base_url();?>/index.php/Input_artikel">Input Artikel</a></li>
                         </ul>
                     </li>
-					
+					<li><span class="border-bottom"></span><a href="login"><?php echo $username;?></a>
+							
+                    </li>
 					
                 </ul>                                              
             </nav>   
