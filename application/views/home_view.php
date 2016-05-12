@@ -6,7 +6,7 @@
 				<div class="cn_content bg-<?=$no;?>" style="top:0px;">
 					<img src="<?=base_url();?>img_content/<?= $row['FILE'];?>">
                     <div class="caption">
-                        <h3><a href="blog-single.html"><?= $no."-".$row['JUDUL'];?></a></h3>
+                        <h3><a href="<?=base_url();?>/index.php/Detail/index/<?=$row['ID_ARTIKEL']?>"><?= $no."-".$row['JUDUL'];?></a></h3>
                         <p><?= $row['ISI'];?></p>
                         <div class="date">
                             <P><?= date_format(date_create($row['DATE_CREATED']),"d"); ?><br><span><?= date_format(date_create($row['DATE_CREATED']),"M"); ?></span></P>

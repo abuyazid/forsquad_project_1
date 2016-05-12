@@ -17,9 +17,15 @@ class Home_model extends CI_Model{
 		return $this->db->query($sql)->result_array();
 	}
 	
+	function f_content_event(){
+		$sql = "SELECT * FROM artikel where id_kategori=3 order by date_created desc limit 3";
+		return $this->db->query($sql)->result_array();
+	}
+	
 	function f_content_game(){
 		$sql = "SELECT * FROM artikel where id_kategori=2 order by date_created desc limit 3";
 		return $this->db->query($sql)->result_array();
 	}
+	
 }
 ?>
