@@ -11,6 +11,18 @@
 <link href="<?=base_url();?>assets/css/styles.css" rel="stylesheet" type="text/css" />
 <link href="<?=base_url();?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
+<?php
+if (isset($this->session->userdata['logged_in'])) {
+$username = ($this->session->userdata['logged_in']['username']);
+$username='hi, '.$username;
+$email = ($this->session->userdata['logged_in']['email']);
+} else {
+$username = 'Login';
+$email = null;
+}
+?>
+
+
 <!--[if  IE]>
 <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/ie.css" />
 <![endif]-->
@@ -69,7 +81,7 @@
                             <li class="last"><span class="border-bottom"></span><a href="full-width.html">full width</a></li>
                         </ul>
                     </li>
-					<li><span class="border-bottom"></span><a href="login">Login</a>
+					<li><span class="border-bottom"></span><a href="login"><?php echo $username;?></a>
 							
                     </li>
 					

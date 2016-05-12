@@ -7,9 +7,19 @@ class User_model extends CI_Model{
 	 $this->load->database();
 	}
 	
-	function f_login(){
-		$sql = "SELECT * FROM artikel order by date_created desc limit 3";
-		return $this->db->query($sql)->result_array();
+	function f_login($data){
+		$condition = "username =" . "'" . $data['username'] . "' AND " . "password =" . "'" . $data['password'] . "'";
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where($condition);
+		$this->db->limit(1);
+		$query = $this->db->get();
+
+		if ($query->num_rows() == 1) {
+			return $query->result();
+		} else {
+			return false;
+		}
 	}
 	
 	function f_register($data){
@@ -23,8 +33,13 @@ class User_model extends CI_Model{
 		   'alamat' => $data['alamat'],
 		   'data_created' => 'now()'
 		);
-		$this->db->insert('user', $data);
-		
+		$query=$this->db->insert('user', $data);
+		echo $query;
+		if ($query) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

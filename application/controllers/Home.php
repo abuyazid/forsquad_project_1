@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 		{
 			parent::__construct();
 			$this->load->model('home_model');
+			$this->load->library('session');
 			$this->load->helper('form');
 		    $this->load->helper('url');
 		}
